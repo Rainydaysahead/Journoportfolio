@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit links — Scarlet Chambers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Newsreader:opsz,wght@6..72,400;6..72,560&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="frame">
+    <header class="site-header">
+      <a class="brand" href="index.html">Scarlet Chambers</a>
+      <nav class="nav" aria-label="Work">
+        <a href="written-work.html">Written Work</a>
+        <a href="documentary.html">Documentary</a>
+        <a href="substack.html">Substack</a>
+        <a href="social-media.html">Social Media</a>
+        <a href="podcast.html">Podcast</a>
+        <a href="photos.html">Photos</a>
+      </nav>
+    </header>
+
+    <main class="page editor">
+      <h1>Edit links</h1>
+      <p class="standfirst">The live site is what the documentary and podcast pages show. Change the links below in the editable version, preview them, then publish when you want the live pages to use them.</p>
+
+      <h2>Live</h2>
+      <ul class="live-links">
+        <li>Documentary: <a id="live-doc" href="" target="_blank" rel="noopener noreferrer"></a></li>
+        <li>Episode one: <a id="live-ep1" href="" target="_blank" rel="noopener noreferrer"></a></li>
+        <li>Episode two: <a id="live-ep2" href="" target="_blank" rel="noopener noreferrer"></a></li>
+      </ul>
+
+      <h2>Editable</h2>
+      <form id="editor">
+        <label>Documentary YouTube link
+          <input id="doc" name="documentary" type="url" placeholder="https://youtu.be/..." autocomplete="off">
+        </label>
+        <label>Episode one SoundCloud link
+          <input id="ep1" name="episode-one" type="url" placeholder="https://on.soundcloud.com/..." autocomplete="off">
+        </label>
+        <label>Episode two SoundCloud link
+          <input id="ep2" name="episode-two" type="url" placeholder="https://on.soundcloud.com/..." autocomplete="off">
+        </label>
+        <div class="editor-actions">
+          <button type="button" id="preview">Preview</button>
+          <button type="button" id="save-draft">Save editable version</button>
+          <button type="button" id="publish">Publish to the live site</button>
+          <button type="button" id="discard">Discard editable version</button>
+        </div>
+      </form>
+      <p id="status" class="standfirst" role="status"></p>
+
+      <h2>Preview</h2>
+      <div class="film-slot" id="preview-film" data-title="Documentary preview">
+        <p class="slot-label">Film</p>
+      </div>
+      <p class="media-link" id="preview-film-link"></p>
+      <div class="episodes">
+        <div class="episode" id="preview-ep1" data-title="Episode one preview">
+          <p class="slot-label">Episode one</p>
+        </div>
+        <p class="media-link" id="preview-ep1-link"></p>
+        <div class="episode" id="preview-ep2" data-title="Episode two preview">
+          <p class="slot-label">Episode two</p>
+        </div>
+        <p class="media-link" id="preview-ep2-link"></p>
+      </div>
+    </main>
+  </div>
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/edit.js"></script>
+</body>
+</html>
